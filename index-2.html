@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TTT THE GAME</title>
+    <link rel="stylesheet" href="stylindex2.css">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+ 
+    
+</head>
+<body>
+    
+    <div id="naglowek1">
+
+        <img src="dance.gif">
+
+    </div>
+    <div id="naglowek2">
+
+       <img id="logo" src="logo1.png" alt="logo_gry"/>
+
+    </div>
+    <div id="naglowek3">
+
+        <img id="firma" src="masny_tutel.png" alt="logo_gry"/>
+
+    </div>
+    <div id="main">
+
+        <button id="login" onclick="location.href='index-2.html'">ZALOGUJ </button>
+        <p>Nie masz  konta?</p>
+        <button id="guest" onclick="location.href='gra-wybor.html'">GRAJ JAKO GOŚĆ</button> 
+        
+    </div>
+
+    
+    <div id="stopka1">
+
+        <h5>&copy; MASNY TUTEL</h5> 
+
+    </div>
+    <div id="stopka2">
+
+        <img src="mute-black.png" id="icon">
+
+    </div>
+    <audio id="mysong" autoplay>
+        <source src="louda.mp3" type="audio/mp3">
+    </audio>
+    <script>
+
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.volume = 0.2;
+                mysong.play();
+                icon.src = "icon-black.png";
+            }else{
+                mysong.pause();
+                icon.src = "mute-black.png";
+            }
+        }
+
+    </script>
+</body>
+</html>
